@@ -4,7 +4,10 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'; 
 import Signup from './components/signup'
+
 
 import "./styles.scss";
 
@@ -21,8 +24,15 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <Navbar />
-      <Signup />
+      <Navbar />      
+      <div className="nav-signup">
+        <Router>
+          <Route exact path="/" />
+          <Route path="/signup" component={Signup}/> 
+          <NavLink to='signup'><button className="aBtn">Signup</button></NavLink>
+          {/* <NavLink to='/'><button className="aBtn">Close</button></NavLink> */}
+          </Router>
+        </div>
       <Charts coinData={coinData} />
     </div>
   );
@@ -30,3 +40,4 @@ const App = () => {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+export default App

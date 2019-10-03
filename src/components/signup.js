@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
-
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'; 
+import App from '../index'
 import { useStyles } from '../hooks/useStyles'; // custom React hook!!!!
 import { useInput } from '../hooks/useInput';
 
@@ -10,7 +11,7 @@ export default function SignupForm() {
   const classes = useStyles();
   const [username, handleUsername, setUsername] = useInput('username', '');
   const [email, handleEmail, setEmail] = useInput('email', '');
-  const [role, handleRole, setRole] = useInput('role', '');
+  const [password, handlePassword, setRole] = useInput('role', '');
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -25,6 +26,9 @@ export default function SignupForm() {
 
   return (
     <div p={2} className="form">
+
+      <h2>Start Trading Crypto Currencies</h2>
+      <p>All we need is an email!</p>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>
@@ -48,10 +52,10 @@ export default function SignupForm() {
           />
           <TextField
             id="outlined-name"
-            label="role"
+            label="password"
             className={classes.textField}
-            value={role}
-            onChange={handleRole}
+            value={password}
+            onChange={handlePassword}
             margin="normal"
             variant="outlined"
           />
@@ -61,6 +65,10 @@ export default function SignupForm() {
           <Button color="red" onClick={clearForm}>
             Clear
           </Button>
+          <Router>
+          {/* <Route path='/' component={App} /> */}
+          <NavLink to='/'><button className="aBtn">Close</button></NavLink>
+        </Router>
         </fieldset>
       </form>
     </div>

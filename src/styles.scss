@@ -245,9 +245,50 @@ text-align: left;
 .dark-mode {
   color: #fff;
   background-color: #313843;
-
+  input{
+    color: #fff;
+  }
+  .form{
+    border: #fff;
+  }
   .navbar {
     background-color: #1F2022;
     border: none;
   }
+}
+
+
+fieldset {
+  border: none;
+  display: flex;
+}
+
+.form {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+legend {
+  text-align: center;
+  font-size: 2em;
+}
+
+.aBtn{
+    padding: 15px 25px;
+    background: #f68819;
+    border:  #f68819;
+    border-radius: 30px;
+    color: white;
+    margin: 3%;
+    
+}
+
+.nav-signup{
+  margin: 3% auto
+}
+
+.nav-signup p{
+  margin: 3% auto
 }
