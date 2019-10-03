@@ -4,6 +4,7 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import Signup from './components/signup'
 
 import "./styles.scss";
 
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <Signup />
       <Charts coinData={coinData} />
     </div>
   );
