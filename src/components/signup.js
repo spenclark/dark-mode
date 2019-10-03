@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'; 
-import App from '../index'
 import { useStyles } from '../hooks/useStyles'; // custom React hook!!!!
 import { useInput } from '../hooks/useInput';
 
@@ -65,10 +64,6 @@ export default function SignupForm() {
           <Button color="red" onClick={clearForm}>
             Clear
           </Button>
-          <Router>
-          {/* <Route path='/' component={App} /> */}
-          <NavLink to='/'><button className="aBtn">Close</button></NavLink>
-        </Router>
         </fieldset>
       </form>
     </div>

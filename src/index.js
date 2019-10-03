@@ -27,10 +27,9 @@ const App = () => {
       <Navbar />      
       <div className="nav-signup">
         <Router>
-          <Route exact path="/" />
           <Route path="/signup" component={Signup}/> 
           <NavLink to='signup'><button className="aBtn">Signup</button></NavLink>
-          {/* <NavLink to='/'><button className="aBtn">Close</button></NavLink> */}
+          <NavLink to='/'><button className="aBtn">Close</button></NavLink>
           </Router>
         </div>
       <Charts coinData={coinData} />
